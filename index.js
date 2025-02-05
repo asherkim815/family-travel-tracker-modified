@@ -8,11 +8,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 const db = new pg.Client({
-  user: process.env.USER,
+  port: process.env.PORT,
   host: process.env.HOST,
   database: process.env.DATABASE,
+  user: process.env.USER,
   password: process.env.PASSWORD,
-  port: process.env.PORT,
 });
 db.connect();
 
