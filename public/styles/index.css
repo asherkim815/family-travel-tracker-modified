@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: #21252b;
+}
+
+section,
+.user-bar,
+.country-bar,
+.country-bar > form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#user-country-bar,
+#current-user-total-countries {
+  justify-content: space-between;
+}
+
+#svg {
+  justify-content: center;
+}
+
+path {
+  fill: #383d46;
+  stroke: #21252b;
+  stroke-width: 0.5;
+}
+
+button {
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+#user-country-bar button {
+  cursor: pointer;
+}
+
+#search-country {
+  width: 300px;
+  margin-right: 10px;
+  border: 0;
+  outline: 0;
+  text-align: center;
+}

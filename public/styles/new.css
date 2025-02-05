@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+
+:root,
+button {
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  color: white;
+  background: #21252b;
+  text-align: center;
+}
+
+.container {
+  width: 50%;
+  margin: auto;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 80%;
+  }
+}
+
+p,
+input[type='text'],
+button {
+  font-size: 20px;
+}
+
+input[type='text'] {
+  height: 25px;
+  border: 0;
+  outline: 0;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+input[type='radio']:checked + label {
+  transform: scale(1.25);
+}
+
+input[type='radio']:checked + .red {
+  border: 2px solid #711313;
+}
+input[type='radio']:checked + .orange {
+  border: 2px solid #873a08;
+}
+input[type='radio']:checked + .yellow {
+  border: 2px solid #816102;
+}
+input[type='radio']:checked + .olive {
+  border: 2px solid #505a0b;
+}
+input[type='radio']:checked + .green {
+  border: 2px solid #0e4e1d;
+}
+input[type='radio']:checked + .teal {
+  border: 2px solid #003633;
+}
+input[type='radio']:checked + .blue {
+  border: 2px solid #103f62;
+}
+input[type='radio']:checked + .violet {
+  border: 2px solid #321a64;
+}
+input[type='radio']:checked + .purple {
+  border: 2px solid #501962;
+}
+input[type='radio']:checked + .pink {
+  border: 2px solid #851554;
+}
+
+label {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+label:hover {
+  transform: scale(1.25);
+  transition: transform 0.2s ease-in-out;
+}
+
+.red {
+  background: #db2828;
+}
+.orange {
+  background: #f2711c;
+}
+.yellow {
+  background: #fbbd08;
+}
+.olive {
+  background: #b5cc18;
+}
+.green {
+  background: #21ba45;
+}
+.teal {
+  background: #00b5ad;
+}
+.blue {
+  background: #2185d0;
+}
+.violet {
+  background: #6435c9;
+}
+.purple {
+  background: #a333c8;
+}
+.pink {
+  background: #e03997;
+}
+
+button {
+  margin: 0 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5%;
+  color: #21252b;
+  background-color: white;
+  cursor: pointer;
+}
