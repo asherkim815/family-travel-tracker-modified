@@ -12,11 +12,11 @@
 
 1. Download and install Node.js and PostgreSQL
 2. Configure the following, either in index.js or via a dotenv file:
-   - port
-   - host
-   - database
-   - user
-   - password
+    - port
+    - host
+    - database
+    - user
+    - password
 3. Run queries.sql queries in Postgres
 4. Start the server and send a get request
 
