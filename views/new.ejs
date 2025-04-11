@@ -7,52 +7,53 @@
     <link rel="stylesheet" href="styles/new.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Add a New Member</h1>
-
+    <main>
       <form id="add-user" action="/add-user" method="post">
-        <p>What's your name?</p>
-        <input type="text" name="name" />
+        <h1>Add a New Member</h1>
 
-        <p>Pick a color :</p>
-        <input id="red" type="radio" name="color" value="red" />
-        <label class="red" for="red"></label>
+        <h2>Name</h2>
 
-        <input id="green" type="radio" name="color" value="green" />
-        <label class="green" for="green"></label>
+        <input class="text-input" type="text" name="name" required />
 
-        <input id="yellow" type="radio" name="color" value="yellow" />
-        <label class="yellow" for="yellow"></label>
+        <h2>Color</h2>
 
-        <input id="olive" type="radio" name="color" value="olive" />
-        <label class="olive" for="olive"></label>
+        <div class="radio-input">
+          <input id="red" type="radio" name="color" value="red" checked />
+          <label class="red" for="red"></label>
 
-        <input id="orange" type="radio" name="color" value="orange" />
-        <label class="orange" for="orange"></label>
+          <input id="green" type="radio" name="color" value="green" />
+          <label class="green" for="green"></label>
 
-        <input id="teal" type="radio" name="color" value="indigo" />
-        <label class="teal" for="teal"></label>
+          <input id="yellow" type="radio" name="color" value="yellow" />
+          <label class="yellow" for="yellow"></label>
 
-        <input id="blue" type="radio" name="color" value="blue" />
-        <label class="blue" for="blue"></label>
+          <input id="olive" type="radio" name="color" value="olive" />
+          <label class="olive" for="olive"></label>
 
-        <input id="violet" type="radio" name="color" value="violet" />
-        <label class="violet" for="violet"></label>
+          <input id="orange" type="radio" name="color" value="orange" />
+          <label class="orange" for="orange"></label>
 
-        <input id="purple" type="radio" name="color" value="purple" />
-        <label class="purple" for="purple"></label>
+          <input id="teal" type="radio" name="color" value="indigo" />
+          <label class="teal" for="teal"></label>
 
-        <input id="pink" type="radio" name="color" value="pink" />
-        <label class="pink" for="pink"></label>
+          <input id="blue" type="radio" name="color" value="blue" />
+          <label class="blue" for="blue"></label>
 
-        <br />
-        <br />
+          <input id="violet" type="radio" name="color" value="violet" />
+          <label class="violet" for="violet"></label>
+
+          <input id="purple" type="radio" name="color" value="purple" />
+          <label class="purple" for="purple"></label>
+
+          <input id="pink" type="radio" name="color" value="pink" />
+          <label class="pink" for="pink"></label>
+        </div>
       </form>
 
-      <form id="/" action="/" method="get"></form>
-
-      <button type="submit" form="add-user">Add</button>
-      <button type="submit" form="/">Back</button>
-    </div>
+      <form id="/" action="/" method="get">
+        <button type="submit" form="add-user">Add</button>
+        <button type="submit">Back</button>
+      </form>
+    </main>
   </body>
 </html>

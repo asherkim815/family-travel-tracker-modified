@@ -1,5 +1,4 @@
 DROP TABLE IF EXISTS users,
-all_countries,
 visited_countries;
 
 CREATE TABLE users(
@@ -9,16 +8,9 @@ CREATE TABLE users(
   UNIQUE (name, color)
 );
 
--- create table and import csv (all_countries.csv)
-CREATE TABLE all_countries(
-  id SERIAL PRIMARY KEY,
-  country_code char(2) UNIQUE NOT NULL,
-  country_name VARCHAR(100) NOT NULL
-);
-
 CREATE TABLE visited_countries(
   user_id INTEGER REFERENCES users(id),
-  country_code CHAR(2) NOT NULL
+  country VARCHAR(100) NOT NULL
 );
 
 INSERT INTO
@@ -29,14 +21,14 @@ VALUES
   ('Venat', 'deepskyblue');
 
 INSERT INTO
-  visited_countries (country_code, user_id)
+  visited_countries (user_id, country)
 VALUES
-  ('KR', 1),
-  ('US', 1),
-  ('FR', 2),
-  ('GB', 2),
-  ('JP', 3),
-  ('US', 3);
+  (1, 'South Korea'),
+  (1, 'United States'),
+  (2, 'South Korea'),
+  (2, 'United States'),
+  (3, 'South Korea'),
+  (3, 'United States');
 
 SELECT
   *

@@ -1,37 +1,64 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
 }
 
 body {
-  height: 100vh;
-  width: 95%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   background: #21252b;
 }
 
-section,
-.user-bar,
-.country-bar,
-.country-bar > form {
+main {
+  padding: 10px;
+  min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
-}
-
-#user-country-bar,
-#current-user-total-countries {
+  flex-direction: column;
+  align-items: stretch;
   justify-content: space-between;
 }
 
-#svg {
-  justify-content: center;
+button {
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* top section */
+#top-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+div,
+form {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+input {
+  margin-right: 10px;
+  padding: 10px;
+  width: 375px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+/* middle section */
+#middle-section {
+  align-self: center;
+}
+
+svg {
+  height: auto;
+  width: 100%;
 }
 
 path {
@@ -40,21 +67,19 @@ path {
   stroke-width: 0.5;
 }
 
-button {
-  padding: 10px;
-  font-size: 20px;
-  border: none;
-  background-color: transparent;
+/* bottom section */
+#bottom-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-#user-country-bar button {
-  cursor: pointer;
+#bottom-section > button {
+  cursor: default;
 }
 
-#search-country {
-  width: 300px;
-  margin-right: 10px;
-  border: 0;
-  outline: 0;
-  text-align: center;
+@media (max-width: 375px) {
+  input {
+    width: 100%;
+  }
 }
