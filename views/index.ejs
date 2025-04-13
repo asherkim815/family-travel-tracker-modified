@@ -16,10 +16,10 @@
             <button
               type="submit"
               name="user-id"
-              value="<%- user.id %>"
-              style="color: <%- user.color %>"
+              value="<%= user.id %>"
+              style="color: <%= user.color %>"
             >
-              <%- user.name %>
+              <%= user.name %>
             </button>
             <% }) %>
           </form>
@@ -33,7 +33,7 @@
               class="none-name-button"
               type="submit"
               name="user-id"
-              value="<%- currentUserId %>"
+              value="<%= currentUserId %>"
             >
               Remove
             </button>
@@ -1369,24 +1369,26 @@
 
       <section id="bottom-section">
         <button class="none-name-button">
-          Current User: <%- allUsers.find((user) => user.id ===
+          Current User: <%= allUsers.find((user) => user.id ===
           currentUserId).name %>
         </button>
 
         <button class="none-name-button">
-          Total Countries: <%- currentUserCountries.length %>
+          Total Countries: <%= currentUserCountries.length %>
         </button>
       </section>
     </main>
 
     <script>
       const currentUserColor =
-        '<%- allUsers.find((user) => user.id === currentUserId).color %>';
-      document.querySelectorAll('.none-name-button').forEach(button =>
-        button.style.color = currentUserColor
-      );
+        '<%= allUsers.find((user) => user.id === currentUserId).color %>';
+      document
+        .querySelectorAll('.none-name-button')
+        .forEach((button) => (button.style.color = currentUserColor));
 
-      const currentUserCountries = <%- JSON.stringify(currentUserCountries) %>;
+      const currentUserCountries = JSON.parse(
+        `<%- JSON.stringify(currentUserCountries) %>`
+      );
       currentUserCountries.forEach((country) => {
         document.querySelector(`path[title='${country}']`).style.fill =
           currentUserColor;
